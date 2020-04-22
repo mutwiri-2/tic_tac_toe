@@ -27,7 +27,7 @@ def print_board(board):
     print('+-' *3 + '+')
     print('|' + board['low-l'] + '|' + board['low-m'] + '|' + board['low-r'] + '|')
 
-import random
+import random, copy
 # for i in range(9):
 #     print_board(the_board)
 
@@ -42,16 +42,14 @@ import random
 #     the_board[comp_move] = comp_choice
 
 # computer only player
-while ' ' in the_board.values():
+current_dict = copy.copy(the_board)
+
+while current_dict != {}:
     print_board(the_board)
     print("#" * 7)
 
-    # computer's move
     comp_choice = random.choice(['X', 'O'])
-    comp_move = random.choice(list(the_board.keys()))
-    if the_board[comp_move] == ' ':
-        the_board[comp_move] = comp_choice
-    else:
-        # print("That move has already been made. Try again")
-        continue
+    comp_move = random.choice(list(current_dict.keys()))
+    the_board[comp_move] = comp_choice
+    del(current_dict[comp_move])
 
