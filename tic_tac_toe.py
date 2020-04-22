@@ -19,7 +19,7 @@ for i in range(9):
     # get user input plus move
     choice = input("X or O ? ")
     move = input("Which position on the board? ")
-    the_board[move] = choice
+    the_board[move] = choice.upper()
 
     # computer's move
     comp_choice = random.choice(['X', 'O'])
