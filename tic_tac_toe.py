@@ -41,9 +41,10 @@ import random
 #     comp_move = random.choice(list(the_board.keys()))
 #     the_board[comp_move] = comp_choice
 
+# computer only player
 while ' ' in the_board.values():
     print_board(the_board)
-    print("#" * 10)
+    print("#" * 7)
 
     # computer's move
     comp_choice = random.choice(['X', 'O'])
