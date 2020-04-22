@@ -27,27 +27,14 @@ def print_board(board):
     print('+-' *3 + '+')
     print('|' + board['low-l'] + '|' + board['low-m'] + '|' + board['low-r'] + '|')
 
-import random, copy
-# for i in range(9):
-#     print_board(the_board)
-
-#     # get user input plus move
-#     choice = input("X or O ? ")
-#     move = input("Which position on the board? ")
-#     the_board[move] = choice.upper()
-
-#     # computer's move
-#     comp_choice = random.choice(['X', 'O'])
-#     comp_move = random.choice(list(the_board.keys()))
-#     the_board[comp_move] = comp_choice
-
+import random, copy, time
 # computer only player
 current_dict = copy.copy(the_board)
 
 while current_dict != {}:
     print_board(the_board)
     print("#" * 7)
-
+    time.sleep(3)
     comp_choice = random.choice(['X', 'O'])
     comp_move = random.choice(list(current_dict.keys()))
     the_board[comp_move] = comp_choice
