@@ -28,15 +28,29 @@ def print_board(board):
     print('|' + board['low-l'] + '|' + board['low-m'] + '|' + board['low-r'] + '|')
 
 import random
-for i in range(9):
-    print_board(the_board)
+# for i in range(9):
+#     print_board(the_board)
 
-    # get user input plus move
-    choice = input("X or O ? ")
-    move = input("Which position on the board? ")
-    the_board[move] = choice.upper()
+#     # get user input plus move
+#     choice = input("X or O ? ")
+#     move = input("Which position on the board? ")
+#     the_board[move] = choice.upper()
+
+#     # computer's move
+#     comp_choice = random.choice(['X', 'O'])
+#     comp_move = random.choice(list(the_board.keys()))
+#     the_board[comp_move] = comp_choice
+
+while ' ' in the_board.values():
+    print_board(the_board)
+    print("#" * 10)
 
     # computer's move
     comp_choice = random.choice(['X', 'O'])
     comp_move = random.choice(list(the_board.keys()))
-    the_board[comp_move] = comp_choice
+    if the_board[comp_move] == ' ':
+        the_board[comp_move] = comp_choice
+    else:
+        # print("That move has already been made. Try again")
+        continue
+
