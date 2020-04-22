@@ -16,9 +16,6 @@ low-r for bottom right cell
 the_board = {'top-l':' ', 'top-m':' ', 'top-r':' ', 'mid-l':' ', 'mid-m':' ', 'mid-r':' ', 'low-l': ' ', 'low-m':' ', 
 'low-r':' '}
 
-# import pprint
-# pprint.pprint(the_board) # sorted
-# print(list(the_board)) # ordered in sequence of entry
 
 def print_board(board):
     print('|' + board['top-l'] + '|' + board['top-m'] + '|' + board['top-r'] + '|')
@@ -27,8 +24,10 @@ def print_board(board):
     print('+-' *3 + '+')
     print('|' + board['low-l'] + '|' + board['low-m'] + '|' + board['low-r'] + '|')
 
-import random, copy, time
 # computer only player
+
+import random, copy, time
+
 current_dict = copy.copy(the_board)
 
 while current_dict != {}:
