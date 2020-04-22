@@ -1,3 +1,18 @@
+"""
+Tic-Tac-Toe stdio (terminal version) by mutwiri-2
+For user move, use the following words for valid inputs:
+top-l for top left cell
+top-m for top middle cell
+top-r for top right cell
+mid-l for middle left cell
+mid-m for middle mid cell
+mid-r for middle right cell
+low-l for bottom left cell
+low-m for bottom middle cell
+low-r for bottom right cell
+
+"""
+
 the_board = {'top-l':' ', 'top-m':' ', 'top-r':' ', 'mid-l':' ', 'mid-m':' ', 'mid-r':' ', 'low-l': ' ', 'low-m':' ', 
 'low-r':' '}
 
