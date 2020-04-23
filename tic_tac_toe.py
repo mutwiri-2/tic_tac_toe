@@ -13,7 +13,7 @@ low-r for bottom right cell
 
 """
 
-the_board = {'top-l':' ', 'top-m':' ', 'top-r':' ', 'mid-l':' ', 'mid-m':' ', 'mid-r':' ', 'low-l': ' ', 'low-m':' ', 
+next_board = {'top-l':' ', 'top-m':' ', 'top-r':' ', 'mid-l':' ', 'mid-m':' ', 'mid-r':' ', 'low-l': ' ', 'low-m':' ', 
 'low-r':' '}
 
 
@@ -28,14 +28,14 @@ def print_board(board):
 
 import random, copy, time
 
-current_dict = copy.copy(the_board)
+current_board = copy.copy(next_board)
 
-while current_dict != {}:
-    print_board(the_board)
+while current_board != {}:
+    print_board(next_board)
     print("#" * 7)
     time.sleep(3)
     comp_choice = random.choice(['X', 'O'])
-    comp_move = random.choice(list(current_dict.keys()))
-    the_board[comp_move] = comp_choice
-    del(current_dict[comp_move])
+    comp_move = random.choice(list(current_board.keys()))
+    next_board[comp_move] = comp_choice
+    del(current_board[comp_move])
 
