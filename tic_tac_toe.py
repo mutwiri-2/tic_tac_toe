@@ -1,5 +1,5 @@
 """
-Tic-Tac-Toe stdio (terminal version) by mutwiri-2
+Tic-Tac-Toe using just std i/o (terminal version) by mutwiri-2
 For user move, use the following words for valid inputs:
 top-l for top left cell
 top-m for top middle cell
