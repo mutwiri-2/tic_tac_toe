@@ -30,12 +30,15 @@ import random, copy, time
 
 current_board = copy.copy(next_board)
 
-while current_board != {}:
+while True:
     print_board(next_board)
     print("#" * 7)
     time.sleep(3)
-    comp_choice = random.choice(['X', 'O'])
-    comp_move = random.choice(list(current_board.keys()))
-    next_board[comp_move] = comp_choice
-    del(current_board[comp_move])
+    if current_board == {}:
+        break
+    else:
+        comp_choice = random.choice(['X', 'O'])
+        comp_move = random.choice(list(current_board.keys()))
+        next_board[comp_move] = comp_choice
+        del(current_board[comp_move])
 
