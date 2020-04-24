@@ -18,13 +18,10 @@ next_board = {'top-l':' ', 'top-m':' ', 'top-r':' ', 'mid-l':' ', 'mid-m':' ', '
 
 
 def print_board(board):
-    # print('|' + board['top-l'] + '|' + board['top-m'] + '|' + board['top-r'] + '|')
     print(f"|{board['top-l']}|{board['top-m']}|{board['top-r']}|")
-    print('+-' *3 + '+')
-    # print('|' + board['mid-l'] + '|' + board['mid-m'] + '|' + board['mid-r'] + '|')
+    print(f"{'+-'*3}+")
     print(f"|{board['mid-l']}|{board['mid-m']}|{board['mid-r']}|")
-    print('+-' *3 + '+')
-    # print('|' + board['low-l'] + '|' + board['low-m'] + '|' + board['low-r'] + '|')
+    print(f"{'+-'*3}+")
     print(f"|{board['low-l']}|{board['low-m']}|{board['low-r']}|")
 # computer only player
 
