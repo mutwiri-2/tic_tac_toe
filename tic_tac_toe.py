@@ -13,8 +13,17 @@ low-r for bottom right cell
 
 """
 
-next_board = {'top-l':' ', 'top-m':' ', 'top-r':' ', 'mid-l':' ', 'mid-m':' ', 'mid-r':' ', 'low-l': ' ', 'low-m':' ', 
-'low-r':' '}
+next_board = {
+    'top-l':' ',
+    'top-m':' ',
+    'top-r':' ',
+    'mid-l':' ',
+    'mid-m':' ', 
+    'mid-r':' ',
+    'low-l': ' ',
+    'low-m':' ', 
+    'low-r':' '
+}
 
 
 def print_board(board):
